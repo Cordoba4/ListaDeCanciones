@@ -14,3 +14,14 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/artistas', function () {
+    //$ar =['katy Perry','Enrique Iglesias'];
+    return view('pantalla1',[
+     
+        'artistas'=>['katy Perry','Enrique Iglesias','Ariana Grande']
+    ]);
+});
+
+
+Route::resource('Canciones','CancionesController');
